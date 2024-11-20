@@ -41,3 +41,10 @@ require('nvim-web-devicons').setup({})
 require('lualine').setup({
     theme = 'material'
 })
+require('telescope').setup({
+	defaults = {
+		file_ignore_patterns = {
+			"node_modules"
+		}
+	}
+})
