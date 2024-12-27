@@ -33,19 +33,20 @@ require('telescope').setup({
 		file_ignore_patterns = {
 			"node_modules",
 			"/**/build/",
-			"*.class"
+			"*.class",
+			"venv/",
+			"__pycache__/",
 		}
 	}
 
 })
-
-
+require("tag-wrapper").setup()
 -- LSP
 require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'lua_ls', 'rust_analyzer'},
+  ensure_installed = {'lua_ls', 'rust_analyzer', 'denols'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
