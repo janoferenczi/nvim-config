@@ -7,6 +7,8 @@ return {
     -- Only one of these is needed.
     "nvim-telescope/telescope.nvim", -- optional
   },
-  config = true
+	config = function ()
+		require('neogit').setup({})
+	end
 }
 
