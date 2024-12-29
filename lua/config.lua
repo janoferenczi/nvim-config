@@ -2,8 +2,6 @@
 vim.cmd[[set tabstop=4]]
 vim.cmd[[set shiftwidth=4]]
 
--- Tools
-
 -- UI and stuff
 vim.wo.relativenumber = true
 vim.wo.number = true
