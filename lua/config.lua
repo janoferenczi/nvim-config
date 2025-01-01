@@ -11,3 +11,7 @@ vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='grey', bold=true })
 vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='darkgrey', bold=true })
 
+require('lsp-config')
+
+
+vim.keymap.set('n', '<Leader>l', '<cmd>lua vim.lsp.buf.format()<CR>', {} )
