@@ -1,7 +1,7 @@
 -- Editor and stuff
 vim.cmd[[set tabstop=4]]
 vim.cmd[[set shiftwidth=4]]
-
+vim.cmd[[tnoremap <Esc> <C-\><C-n>]]
 -- UI and stuff
 vim.wo.relativenumber = true
 vim.wo.number = true
