@@ -15,3 +15,4 @@ require('lsp-config')
 
 
 vim.keymap.set('n', '<Leader>l', '<cmd>lua vim.lsp.buf.format()<CR>', {} )
+vim.keymap.set('n', '<Leader>LU', '<cmd>Lazy update<CR>', {} )
