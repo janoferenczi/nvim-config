@@ -20,6 +20,9 @@ return {
 					"**/*.class",
 					"venv/",
 					"__pycache__/",
+				},
+				path_display = {
+					shorten = 5
 				}
 			},
 			extensions = {
