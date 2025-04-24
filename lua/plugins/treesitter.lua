@@ -8,7 +8,16 @@ return {
 	    ensure_installed = { 'lua', 'typescript', 'angular', 'javascript', 'norg', 'c', 'cpp', 'make', 'rust', 'java', 'groovy', 'sql', 'html', 'css', 'go', 'asm', 'zig', 'swift' },
 	    sync_install = false,
 	    highlight = { enable = true },
-	    indent = { enable = true }
+	    indent = { enable = true },
+		incremental_selection = {
+			enabled = true,
+			keymaps = {
+				init_selection = "gnn",
+				node_incremental = "grn",
+				scope_incremental = "grc",
+				node_decremental = "grm",
+			},
+		},
 	})
     end
 }
