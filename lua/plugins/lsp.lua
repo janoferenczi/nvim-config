@@ -6,7 +6,15 @@ return {
 	{
 		'williamboman/mason.nvim',
 		config = function()
-			require('mason').setup({})
+			require('mason').setup({
+				ui = {
+					border = "single",
+					size = {
+						width = 1,
+						height = 1,
+					},
+				},
+			})
 		end
 
 	},
@@ -25,5 +33,13 @@ return {
 			})
 		end
 
+	},
+	{
+		"stevearc/conform.nvim",
+		opts = {
+			formatters_bt_ft = {
+				javascript = { "prettier"},
+			}
+		}
 	},
 }

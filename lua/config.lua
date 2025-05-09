@@ -12,8 +12,8 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='darkgrey', bold=true })
 
 require('lsp-config')
-local cmp = require("cmp")
 
+local cmp = require("cmp")
 cmp.setup({
     sources = cmp.config.sources({
         { name = "path" },  -- Enables path completion
@@ -29,18 +29,35 @@ cmp.setup({
 vim.keymap.set('n', '<Leader>l', '<cmd>lua vim.lsp.buf.format()<CR>', {} )
 vim.keymap.set('n', '<Leader>LU', '<cmd>Lazy update<CR>', {} )
 vim.diagnostic.config({
-	virtual_text = {
-		prefix = '●',
-		source = 'if_many'
-	},
+	virtual_text = false,
 	signs = true,
 	underline = true,
 	update_in_insert = false,
 	severity_sort = true,
+	float = {
+		border = "rounded",
+		source = "always",
+		header = false,
+		prefix = " ▶ "
+	}
 })
+
+vim.cmd([[
+  highlight DiagnosticError guifg=#ff0000
+  highlight DiagnosticWarn guifg=#ffcc00
+  highlight DiagnosticInfo guifg=#00ff00
+  highlight DiagnosticHint guifg=#0000ff
+]])
+
 vim.o.updatetime = 250  -- how long to wait before triggering CursorHold
 
 vim.cmd([[
   autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
+require('conform').setup({
+	format_on_save = {
+		lsp_fallback = true,
+		timeout_ms = 500,
+	}
+})
