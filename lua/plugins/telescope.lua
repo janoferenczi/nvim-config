@@ -1,6 +1,7 @@
 return {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+	'nvim-telescope/telescope.nvim',
+	tag = '0.1.8',
+	dependencies = { 'nvim-lua/plenary.nvim' },
 	config = function()
 		-- Basic keybindings
 		local builtin = require('telescope.builtin')
@@ -21,9 +22,6 @@ return {
 					"venv/",
 					"__pycache__/",
 				},
-				path_display = {
-					shorten = 5
-				}
 			},
 			extensions = {
 				fzf = {
@@ -36,6 +34,5 @@ return {
 		})
 
 		require('telescope').load_extension('fzf')
-
 	end
 }
