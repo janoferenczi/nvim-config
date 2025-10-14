@@ -30,18 +30,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
--- These are just examples. Replace them with the language
--- servers you have installed in your system
-require('lspconfig').lua_ls.setup({
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim' }
-			}
-		}
-	}
-})
-
 local cmp = require('cmp')
 cmp.setup({
 	sources = {
