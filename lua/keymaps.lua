@@ -12,6 +12,9 @@ vim.keymap.set('n', '<leader>fr', builtin.lsp_references,		{ desc = 'Telescope L
 vim.keymap.set('n', '<leader>f"', builtin.resume, 				{ desc = 'Telescope open last picker' })
 vim.keymap.set('n', '<leader>?' , builtin.keymaps, 				{ desc = 'Telescope keymaps' })
 
+-- Trouble
+vim.keymap.set('n', '<leader>xx', ':Trouble diagnostics toggle<cr>', { desc = 'Trouble diagnostics toggle' })
+vim.keymap.set('n', '<leader>xX', ':Trouble diagnostics toggle filter.buf=0<cr>', { desc = 'Trouble diagnostics toggle current buffer' })
 
 vim.keymap.set('n', '<leader>;', ':noh<cr>', { desc = "Removes highlighting"})
 vim.keymap.set('n', '<leader>s', function()

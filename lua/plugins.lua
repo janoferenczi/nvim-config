@@ -3,6 +3,8 @@ local function gh(package)
 end
 
 vim.pack.add { gh("folke/tokyonight.nvim") }
+vim.pack.add { gh("ellisonleao/gruvbox.nvim") }
+vim.pack.add { gh("nvim-lualine/lualine.nvim") }
 vim.pack.add { 
 	gh("nvim-telescope/telescope.nvim"),
 	gh("nvim-lua/plenary.nvim"),
@@ -34,4 +36,10 @@ vim.pack.add({
 	gh("mason-org/mason.nvim"),
 	gh("mason-org/mason-lspconfig.nvim"),
 	gh("neovim/nvim-lspconfig"),
+})
+vim.pack.add({
+	gh("folke/trouble.nvim")
+})
+vim.pack.add({
+	gh("janoferenczi/tag-wrapper.nvim")
 })

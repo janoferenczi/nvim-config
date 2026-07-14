@@ -23,7 +23,9 @@ telescope.load_extension('fzf')
 
 require('nvim-web-devicons').setup {}
 require('mason').setup {}
-
+require('lualine').setup {}
+require('trouble').setup {}
+require('tag-wrapper').setup {}
 
 -- Tree-sitter
 vim.api.nvim_create_autocmd("FileType", {
