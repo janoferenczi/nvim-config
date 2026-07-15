@@ -30,7 +30,7 @@ require('mason').setup {}
 require('lualine').setup {}
 require('trouble').setup {}
 require('tag-wrapper').setup {}
-
+require('fidget').setup {}
 -- Tree-sitter
 vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
