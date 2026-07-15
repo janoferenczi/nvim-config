@@ -1,4 +1,6 @@
 vim.keymap.set('n', '<leader>nt', ':Neotree toggle<cr>', { desc = "Toggles neotree", unique = true })
+vim.keymap.set('n', '<leader>nr', ':Neotree reveal<cr>', { desc = "Reveals current file in neotree", unique = true })
+
 vim.keymap.set('n', '<leader>ng', ':Neogit<cr>', { desc = "Neogit UI" })
 
 local builtin = require('telescope.builtin')
