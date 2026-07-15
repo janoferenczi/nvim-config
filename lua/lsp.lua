@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Optional: only map if the server supports the capability
     if client and client.supports_method('textDocument/formatting') then
-      map('n', '<leader>f', function()
+      map('n', '<leader>lf', function()
         vim.lsp.buf.format({ async = true })
       end, 'Format buffer')
     end
