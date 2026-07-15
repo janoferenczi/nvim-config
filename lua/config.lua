@@ -18,7 +18,11 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg = 'white', bold = true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = 'grey', bold = false })
 
 local telescope = require('telescope')
-telescope.setup {}
+telescope.setup {
+	defaults = {
+		path_display = { "filename_first" }
+	}
+}
 telescope.load_extension('fzf')
 
 require('nvim-web-devicons').setup {}
