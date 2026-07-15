@@ -43,3 +43,6 @@ vim.pack.add({
 vim.pack.add({
 	gh("janoferenczi/tag-wrapper.nvim")
 })
+vim.pack.add({
+	gh("j-hui/fidget.nvim")
+})
